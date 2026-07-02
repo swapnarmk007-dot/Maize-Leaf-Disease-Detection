@@ -161,7 +161,7 @@ confusion matrix and ROC curves are reproducible.
 
 ## 6. Troubleshooting
 
-- **`No trained model found`** → run `python train.py` first.
+- **`trained model found`** → run `python train.py` first.
 - **Out-of-memory on Cloud Run** → increase `--memory` to `2Gi`/`4Gi`.
 - **Wrong class names** → fix folder names to match `CLASS_NAMES` in `utils.py`.
 - **Fonts look different on the server** → expected; Cambria falls back to a
