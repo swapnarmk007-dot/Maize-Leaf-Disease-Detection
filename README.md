@@ -152,7 +152,7 @@ Re-run the same `gcloud run deploy` command; it builds a new revision.
 | Backbone | 4 Conv blocks (32→128) | Frozen ImageNet conv base |
 | Head | GAP → Dense(128) → softmax(4) | GAP → Dense(256) → softmax(4) |
 | Training | from scratch | transfer learning (lr 1e-4) |
-
+'
 Augmentation (flip, rotation, zoom) is applied to the training split only.
 Evaluation uses a fixed 20% validation split with `shuffle=False` so the
 confusion matrix and ROC curves are reproducible.
@@ -161,7 +161,7 @@ confusion matrix and ROC curves are reproducible.
 
 ## 6. Troubleshooting
 
-- **`trained model found`** → run `python train.py` first.
+- **`trained model found`** → stored in `.keras file`.
 - **Out-of-memory on Cloud Run** → increase `--memory` to `2Gi`/`4Gi`.
 - **Wrong class names** → fix folder names to match `CLASS_NAMES` in `utils.py`.
 - **Fonts look different on the server** → expected; Cambria falls back to a
